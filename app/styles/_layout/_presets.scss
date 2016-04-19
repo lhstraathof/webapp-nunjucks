@@ -1,0 +1,10 @@
+@charset 'UTF-8';
+
+body {
+  box-sizing: border-box;
+}
+
+// add this to force padding inside elements
+*, *:before, *:after {
+  box-sizing: inherit;
+}

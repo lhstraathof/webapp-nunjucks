@@ -1,0 +1,30 @@
+<!-- index.njk -->
+{% extends 'layout.njk' %}
+
+{% block content %} 
+
+<!-- Import navigation -->
+{% import './macros/navigation.njk' as nav %}
+<!-- set the active page to 'home' -->
+{{nav.active('about')}}
+
+<div class="hero-unit">
+  <h1>Yes!</h1>
+  <p>You now have</p>
+  <ul>
+    <li>HTML5 Boilerplate</li>
+    <li>Sass</li>
+    <li>jQuery</li>
+  </ul>
+</div>
+
+<div class="gallery">
+  <!-- Loops through "images" array from data.json -->
+  {% for image in images %}
+  <div class="gallery__item">
+    <img src="{{image.src}}" alt="{{image.alt}}">
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
